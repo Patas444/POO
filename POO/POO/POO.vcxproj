@@ -18,6 +18,26 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="scr\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AbstractFactory.h" />
+    <ClInclude Include="include\Adapter Circle.h" />
+    <ClInclude Include="include\Adapter.h" />
+    <ClInclude Include="include\ArchivoComposite.h" />
+    <ClInclude Include="include\Builder.h" />
+    <ClInclude Include="include\Composite.h" />
+    <ClInclude Include="include\Decorator.h" />
+    <ClInclude Include="include\Decorator_Cafe.h" />
+    <ClInclude Include="include\DocumentPrototype.h" />
+    <ClInclude Include="include\Factory.h" />
+    <ClInclude Include="include\PizzaTime.h" />
+    <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\Prototype.h" />
+    <ClInclude Include="include\RegistroActividad.h" />
+    <ClInclude Include="include\Singleton.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -70,6 +90,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PublicIncludeDirectories>./include/;</PublicIncludeDirectories>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -104,6 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./include/;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,9 +150,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
